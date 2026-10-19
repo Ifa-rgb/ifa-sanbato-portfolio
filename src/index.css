@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  :root,
+  :root[data-theme="light"],
+  .light {
+    /* Pure White & Black Theme */
+    --bg-canvas: #ffffff;
+    --bg-canvas-subtle: #f4f4f5;
+    --bg-card: #ffffff;
+    --bg-card-hover: #ffffff;
+    --bg-card-subtle: #f8fafc;
+    --bg-nav: rgba(255, 255, 255, 0.94);
+    --border-subtle: #e4e4e7;
+    --border-strong: #18181b;
+    --border-accent: rgba(14, 165, 233, 0.35);
+
+    --text-primary: #09090b;
+    --text-secondary: #27272a;
+    --text-muted: #52525b;
+    --text-accent: #0284c7;
+
+    --glow-cyan: rgba(14, 165, 233, 0.12);
+    --glow-blue: rgba(59, 130, 246, 0.08);
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  }
+
+  :root[data-theme="dark"],
+  .dark {
+    /* Deep Black Theme */
+    --bg-canvas: #050508;
+    --bg-canvas-subtle: #0c0c11;
+    --bg-card: #111116;
+    --bg-card-hover: #181820;
+    --bg-card-subtle: #191922;
+    --bg-nav: rgba(5, 5, 8, 0.92);
+    --border-subtle: #27272e;
+    --border-strong: #3f3f4a;
+    --border-accent: rgba(34, 211, 238, 0.3);
+
+    --text-primary: #ffffff;
+    --text-secondary: #e4e4e7;
+    --text-muted: #a1a1aa;
+    --text-accent: #22d3ee;
+
+    --glow-cyan: rgba(6, 182, 212, 0.18);
+    --glow-blue: rgba(59, 130, 246, 0.14);
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  }
+
+  :root[data-theme="monochrome"],
+  .theme-monochrome {
+    /* Pure High-Contrast Black & White (Noir) Theme */
+    --bg-canvas: #000000;
+    --bg-canvas-subtle: #0a0a0a;
+    --bg-card: #121212;
+    --bg-card-hover: #1a1a1a;
+    --bg-card-subtle: #1c1c1c;
+    --bg-nav: rgba(0, 0, 0, 0.95);
+    --border-subtle: #2d2d2d;
+    --border-strong: #ffffff;
+    --border-accent: rgba(255, 255, 255, 0.5);
+
+    --text-primary: #ffffff;
+    --text-secondary: #d4d4d8;
+    --text-muted: #a1a1aa;
+    --text-accent: #ffffff;
+
+    --glow-cyan: rgba(255, 255, 255, 0.1);
+    --glow-blue: rgba(255, 255, 255, 0.08);
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+/* Monochrome Black & White styling modifiers */
+[data-theme="monochrome"] img {
+  filter: grayscale(100%) contrast(105%);
+}
+
+[data-theme="monochrome"] .bg-gradient-to-r,
+[data-theme="monochrome"] .bg-gradient-to-br,
+[data-theme="monochrome"] .bg-gradient-to-tr {
+  filter: grayscale(100%);
+}
+
+[data-theme="monochrome"] .text-cyan-600,
+[data-theme="monochrome"] .text-cyan-700,
+[data-theme="monochrome"] .text-cyan-400,
+[data-theme="monochrome"] .text-cyan-300 {
+  color: #ffffff !important;
+}
+
+/* Print styling for dedicated recruiter document view & PDF export */
+@media print {
+  @page {
+    margin: 10mm 12mm;
+    size: A4 portrait;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print,
+  nav,
+  header.sticky,
+  #scroll-to-top,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
