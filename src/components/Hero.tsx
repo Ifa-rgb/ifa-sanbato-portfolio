@@ -171,14 +171,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onTogglePrintView, onOpenD
                   {/* Circular Image Container */}
                   <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-88 md:h-88 rounded-full overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-inner group">
                     <img
-                      src={personalInfo.profileImage || "/src/assets/images/profile.jpg"}
-                      alt="IFA SANBATO - Full-Stack Developer and Software Engineer"
-                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 rounded-full"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLElement).style.display = 'none';
-                      }}
-                    />
+             src="/profile.jpg"
+              alt="IFA SANBATO - Full-Stack Developer and Software Engineer"
+      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 rounded-full"
+     onError={(e) => {
+    console.error("Profile image failed to load:", e.currentTarget.src);
+  }}
+   />
 
                     {/* Subtle internal vignette */}
                     <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-black/10 dark:ring-white/10 pointer-events-none" />
