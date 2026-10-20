@@ -1,13 +1,15 @@
 import { PersonalInfo, Project, Skill, EducationItem, Testimonial } from '../types/portfolio';
-
+import agroAppImage from "../assets/images/project_agro_app_1792150483062.jpg";
+import calculatorImage from "../assets/images/project_calculator_1792150482742.jpg";
+import schoolSystemImage from "../assets/images/project_school_system_1792150482587.jpg";
 export const personalInfo: PersonalInfo = {
   fullName: "IFA SANBATO",
   title: "Full-Stack Developer and Software Engineer",
   profileImage: "/src/assets/images/profile.jpg",
   email: "ifaasanbatoo@gmail.com",
   phone: "+251 915 241 208",
-  location: "Dembi, Oromia, Ethiopia",
-  region: "Dembi, West Oromia",
+  location: "Dembi Dollo, Oromia, Ethiopia",
+  region: "Dembi Dollo, West Oromia",
   country: "Ethiopia",
   careerObjective: "Passionate Full-Stack Developer and Software Engineer seeking a high-impact web development job. Dedicated to crafting fast, responsive, and maintainable web applications using modern React, JavaScript, PHP, and MySQL architectures. Ready to join a forward-looking team and deliver immediate product value.",
   bio: "I am a motivated Software Engineer based in Dembi, Ethiopia, with solid technical foundations across frontend engineering, backend integrations, and relational database systems. I specialize in building user-focused web applications with React, JavaScript (ES6+), modern CSS, Node.js, and developing secure backend APIs using PHP and MySQL. Driven by disciplined problem solving and continuous self-improvement, I aim to create robust software solutions that solve real community and business challenges.",
@@ -30,7 +32,7 @@ export const skillsData: Skill[] = [
   {
     name: "React",
     category: "Frontend",
-    level: 90,
+    level: 70,
     experience: "Modern SPAs, Hooks, State Management",
     description: "Component-driven development, custom hooks, reusable UI architectures, virtual DOM optimization, and responsive interfaces.",
     featured: true
@@ -38,7 +40,7 @@ export const skillsData: Skill[] = [
   {
     name: "JavaScript (ES6+)",
     category: "Frontend",
-    level: 92,
+    level: 80,
     experience: "Async/Await, DOM APIs, Modular Code",
     description: "Deep knowledge of modern ECMAScript, promises, asynchronous event loops, array methods, and client-side data manipulation.",
     featured: true
@@ -46,7 +48,7 @@ export const skillsData: Skill[] = [
   {
     name: "HTML5",
     category: "Frontend",
-    level: 95,
+    level: 90,
     experience: "Semantic Markup, Accessibility (a11y)",
     description: "Clean semantic markup, accessible forms, audio/video APIs, meta structures, and mobile-friendly document outlining.",
     featured: true
@@ -78,7 +80,7 @@ export const skillsData: Skill[] = [
   {
     name: "Node.js",
     category: "Backend & Database",
-    level: 80,
+    level: 75,
     experience: "Express.js, API Routing, NPM",
     description: "Building lightweight web servers, asynchronous middleware, JSON API endpoints, and environment configurations.",
     featured: true
@@ -86,7 +88,7 @@ export const skillsData: Skill[] = [
   {
     name: "Problem Solving",
     category: "Core & Tools",
-    level: 90,
+    level: 74,
     experience: "Algorithms, Analytical Thinking, Debugging",
     description: "Breaking complex engineering requirements into modular algorithmic steps, efficient data handling, and root-cause debugging.",
     featured: true
@@ -94,7 +96,7 @@ export const skillsData: Skill[] = [
   {
     name: "Git & GitHub",
     category: "Core & Tools",
-    level: 86,
+    level: 75,
     experience: "Version Control, Branching, Collaboration",
     description: "Code commit discipline, branch management, merge conflict resolution, open source collaboration, and repository management.",
     featured: false
@@ -102,7 +104,7 @@ export const skillsData: Skill[] = [
   {
     name: "RESTful APIs",
     category: "Backend & Database",
-    level: 88,
+    level: 87,
     experience: "JSON Endpoints, HTTP Methods, Fetch/Axios",
     description: "Designing and consuming standard REST architectural endpoints, error handling, status codes, and asynchronous fetching.",
     featured: false
@@ -173,7 +175,7 @@ export const educationData: EducationItem[] = [
   {
     degree: "General Secondary Education",
     institution: "Secondary High School",
-    location: "Dembi, Oromia, Ethiopia",
+    location: "Dembi Dollo, Oromia, Ethiopia",
     period: "Secondary School Phase",
     field: "General Sciences & Academic Foundations",
     status: "Completed",
@@ -193,6 +195,7 @@ export const educationData: EducationItem[] = [
 
 export const projectsData: Project[] = [
   {
+    image: "agroAppImage,",
     id: "agro-app",
     title: "Agro App",
     subtitle: "Smart Agriculture Management & Farmers Market Platform",
@@ -219,6 +222,7 @@ export const projectsData: Project[] = [
     backendReadiness: "Equipped with complete PHP endpoints and MySQL schema for farmer authentication, crop harvest submissions, and market price updates."
   },
   {
+    image: "calculatorImage",
     id: "modern-calculator",
     title: "Interactive Web Calculator",
     subtitle: "Precision Scientific & Financial Calculation Suite",
@@ -244,6 +248,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    image: "schoolSystemImage",
     id: "school-management",
     title: "School Management Website",
     subtitle: "Comprehensive Academic Administration & Student Portal",
@@ -275,7 +280,7 @@ export const experienceHighlights = [
   { label: "Core Focus", value: "Full-Stack Web Dev" },
   { label: "Frontend", value: "React & Modern JS" },
   { label: "Backend Ready", value: "PHP & MySQL" },
-  { label: "Location", value: "Dembi, Ethiopia" },
+  { label: "Location", value: "Dembi Dollo, Ethiopia" },
   { label: "Status", value: "Ready for Work" }
 ];
 
