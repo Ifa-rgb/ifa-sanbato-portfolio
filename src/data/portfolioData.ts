@@ -1,7 +1,7 @@
 import { PersonalInfo, Project, Skill, EducationItem, Testimonial } from '../types/portfolio';
 import agroAppImage from "../assets/images/project_agro_app_1792150483062.jpg";
 import calculatorImage from "../assets/images/project_calculator_1792150482742.jpg";
-import schoolSystemImage from "../assets/images/project_school_system_1792150482587.jpg";
+import schoolSystemImage from "../assets/images/project_school_system_1792150482587 copy.jpg";
 export const personalInfo: PersonalInfo = {
   fullName: "IFA SANBATO",
   title: "Full-Stack Developer and Software Engineer",
@@ -195,13 +195,12 @@ export const educationData: EducationItem[] = [
 
 export const projectsData: Project[] = [
   {
-    image: "agroAppImage,",
     id: "agro-app",
     title: "Agro App",
     subtitle: "Smart Agriculture Management & Farmers Market Platform",
     description: "A specialized agricultural web application designed to empower Ethiopian farmers with crop tracking, regional commodity market price insights, harvest scheduling, and direct buyer connections.",
     longDescription: "Agro App addresses critical challenges faced by local farmers and agricultural distributors in Ethiopia. By providing transparent, real-time commodity pricing for staples like Teff, Maize, Wheat, and Coffee across major regional trading hubs (Addis Ababa, Adama, Jimma, Bahir Dar), the application prevents price exploitation. It includes intuitive crop harvest recording, weather-informed advisory alerts, and an inventory tracker that works smoothly even on low-bandwidth mobile connections.",
-    image: "/src/assets/images/project_agro_app_1792150483062.jpg",
+    image: agroAppImage,
     tags: ["React", "JavaScript", "PHP / MySQL Ready", "Tailwind CSS", "Data Analytics"],
     category: "Full-Stack",
     categories: ["Web", "Mobile", "API"],
@@ -222,13 +221,12 @@ export const projectsData: Project[] = [
     backendReadiness: "Equipped with complete PHP endpoints and MySQL schema for farmer authentication, crop harvest submissions, and market price updates."
   },
   {
-    image: "calculatorImage",
     id: "modern-calculator",
     title: "Interactive Web Calculator",
     subtitle: "Precision Scientific & Financial Calculation Suite",
     description: "A fast, sleek web calculator featuring real-time arithmetic, financial calculation modules, an OLED-style display with cyan glows, and persistent calculation history.",
     longDescription: "More than a basic arithmetic tool, this project showcases clean state-machine architecture in React. It features error-free handling of floating-point mathematics, order of operations precedence, keyboard shortcut bindings, a persistent calculation log, memory storage (M+, M-, MR), and financial estimation mini-tools (interest and currency estimations). Built with a modern dark slate glassmorphism look with cyan neon indicators.",
-    image: "/src/assets/images/project_calculator_1792150482742.jpg",
+    image: calculatorImage,
     tags: ["React", "JavaScript", "Algorithms", "CSS3 / Tailwind", "State Management"],
     category: "Frontend",
     categories: ["Web", "Mobile"],
@@ -248,13 +246,12 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    image: "schoolSystemImage",
     id: "school-management",
     title: "School Management Website",
     subtitle: "Comprehensive Academic Administration & Student Portal",
     description: "An end-to-end web system for educational institutions featuring student enrollment registries, academic grade breakdowns, class timetables, and teacher rosters.",
     longDescription: "The School Management Website is an enterprise-grade administration portal built to streamline institutional workflows for schools and colleges. Administrators and teachers can register students, assign classes, monitor attendance records, enter semester examination marks, and generate automated GPA/grade analytics. Built with a modular React frontend connected to an architectural PHP and MySQL database model with role-based access control.",
-    image: "/src/assets/images/project_school_system_1792150482587.jpg",
+    image: schoolSystemImage,
     tags: ["React", "PHP", "MySQL", "JavaScript", "Enterprise UI", "Role-Based Access"],
     category: "Full-Stack",
     categories: ["Web", "API"],
